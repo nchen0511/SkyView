@@ -11,7 +11,7 @@ public class SkyView {
                     count++;
                 }
             } else {
-                for(int j=view[i].length;j<=0;j--){
+                for(int j=view[i].length-1;j>=0;j--){
                     view[i][j] = scanned[count];
                     count++;
                 }
@@ -29,5 +29,16 @@ public class SkyView {
             }
         }
         return (avg/num);
+    }
+
+    public String toString(){
+        String temp = "";
+        for(int i=0;i<view.length;i++){
+            for(int j=0;j<view[i].length;j++){
+                temp+=view[i][j] + " ";
+            }
+            temp+="\n";
+        }
+        return temp;
     }
 }
